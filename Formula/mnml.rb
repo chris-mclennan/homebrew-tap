@@ -1,26 +1,26 @@
 class Mnml < Formula
   desc "NvChad-style terminal IDE in Rust"
   homepage "https://mnml.sh"
-  version "0.2.0"
+  version "0.2.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/chris-mclennan/mnml/releases/download/v#{version}/mnml-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "3a078c1d1601ebd82c38e033834cf37b0ebc5766a1face8763350a4d154cc997"
+      sha256 "799ece5c667e0d0fbac98c807d751d170040e0afe81b6b743784fb8aa0883083"
     else
       url "https://github.com/chris-mclennan/mnml/releases/download/v#{version}/mnml-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "5c4e185ecc9b2e8462379cd903397ed1be2c07b26acb7bdcababc068e27c44b5"
+      sha256 "f2b27e1805987766ef14ce8ba12b40c3f823feb634e44474414102443fdee0e4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/chris-mclennan/mnml/releases/download/v#{version}/mnml-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e5a72cffb728fc5522edccb8d99e8bab0cbe13667196c6f820e96eec7afd5b6f"
+      sha256 "6a18b455f2dc1ae52a483c30a93850356d7826f403c6f5bbb9da7f95e5b3772d"
     else
       url "https://github.com/chris-mclennan/mnml/releases/download/v#{version}/mnml-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c54a14f854d7ccdfd7ed4d571f8805e4c8f7d5b0f1c968c02e2d7be55a88c410"
+      sha256 "16a812d0930cb569dab40aaa1e46c7b6ecd6a9716a168bc77b69bdfafcaa0b97"
     end
   end
 
