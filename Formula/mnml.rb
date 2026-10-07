@@ -1,6 +1,6 @@
 # The tap formula, chris-mclennan/homebrew-tap Formula/mnml.rb.
 #
-# A template: bump-homebrew-tap.yml fills the 0.3.4 and @SHA_*@ slots from
+# A template: bump-homebrew-tap.yml fills the 0.3.5 and @SHA_*@ slots from
 # the release's sha256.sum and commits the result to the tap. Keep it a
 # formula the tap can take verbatim — the four url/sha256 pairs, the
 # bin.install, the --version test — so the tap needs no script of its own to
@@ -8,26 +8,26 @@
 class Mnml < Formula
   desc "NvChad-style terminal IDE"
   homepage "https://mnml.sh"
-  version "0.3.4"
+  version "0.3.5"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/chris-mclennan/mnml/releases/download/v#{version}/mnml-aarch64-apple-darwin.tar.xz"
-      sha256 "db750f613a97a2128147747a5ffe992841da191bd2b029df14f79a93cd31ec81"
+      sha256 "e716f195c04dbcec2bf533a4180a17a17e666f5e157fe15980c7c172c6b62c01"
     else
       url "https://github.com/chris-mclennan/mnml/releases/download/v#{version}/mnml-x86_64-apple-darwin.tar.xz"
-      sha256 "d5992e353073f7a4fc19d6c80b1b757e660a55a61384135da2b144c416f8b02b"
+      sha256 "a7d901e6adf2d9876c2288f48113cb073b55f33cca92548ee5ccbdb5d2b4c99a"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/chris-mclennan/mnml/releases/download/v#{version}/mnml-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c4a3767f8e37707d8994536fdd4e53ef7b03e1d8690c11940af1e52c48776a7e"
+      sha256 "26281a4189bb9c7bf53825275395a9b7fcca86a66a31f195635765b64a62fef9"
     else
       url "https://github.com/chris-mclennan/mnml/releases/download/v#{version}/mnml-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d63d3660cea28a7877ead38d7bf6e5e6fbbe2b85cdde4a9bd60cb859ed20f43e"
+      sha256 "60927fa60a892038f60c31f11297b71ea68410be37c5bef030ad0cf1ca9105b0"
     end
   end
 
